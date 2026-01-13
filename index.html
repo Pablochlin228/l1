@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .test {
+            background-color: rgb(87, 76, 76);
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: ;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contactInformation">
+
+    </div>
+
+    <div id="cityInformation">
+
+    </div>
+
+    <script type="text/babel">
+
+        const testClass = "test";
+
+        let myStyle = {
+            display: "flex",
+            width: "400px",
+            flexDirection: "column",
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+            color: "rgb(255, 255, 255)",
+            backgroundColor: "rgb(96, 177, 231)",
+            fontFamily: "Verdana",
+            border: "2px solid black",
+            borderRadius: "20px"
+        }
+
+        let myPhoto = {
+            width: "200px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: "10px",
+            borderRadius: "10px"
+        }
+
+        let myStyle2 = {
+            display: "flex",
+            width: "600px",
+            flexDirection: "column",
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+            color: "rgb(87, 76, 76)",
+            backgroundColor: "bisque",
+            fontFamily: "Verdana",
+            border: "2px solid black",
+            borderRadius: "14px"
+        }
+
+        let myPhoto2 = {
+            width: "250px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginTop: "10px",
+            borderRadius: "10px"
+        }
+
+        let myPhotoClass = {
+            display: "flex",
+            width: "520px",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: "14px"
+        }
+
+        let div = document.getElementById("contactInformation");
+
+        let root = ReactDOM.createRoot(div);
+        root.render(
+            <div style={myStyle}>
+                <div>
+                    <img src="" alt="bookPhoto" style={myPhoto}></img>
+                    <div>
+                        <h3>Name:</h3>
+                        <h3>Author:</h3>
+                        <h3>Genre:</h3>
+                        <h3>Genre:</h3>
+                        <h3>Amount of pages:</h3>
+                    </div>
+                </div>
+                <div>
+
+
+                </div>
+            </div>
+        );
+
+        // let div2 = document.getElementById("cityInformation");
+
+        // let root2 = ReactDOM.createRoot(div2);
+        // root2.render(
+        //     <div style={myStyle2}>
+        //         <h2>City:Odessa</h2>
+        //         <h2>Country:Ukraine</h2>
+        //         <h2>Founding date: 19.05 1945</h2>
+        //         <div style = {myPhotoClass}>
+        //             <img src="./2.jpg" alt="myPhoto" style={myPhoto2}></img>
+        //             <img src="./3.jpg" alt="myPhoto" style={myPhoto2}></img>
+        //             <img src="./4.jpg" alt="myPhoto" style={myPhoto2}></img>
+        //             <img src="./5.jpg" alt="myPhoto" style={myPhoto2}></img>
+        //         </div>
+        //     </div>
+        // ); 
+    </script>
+</body>
+
+</html>
