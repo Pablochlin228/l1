@@ -10,10 +10,9 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <style>
         .test {
-            background-color: rgb(87, 76, 76);
+            background-color: rgb(30, 56, 160);
             flex-direction: column;
-            justify-content: center;
-            margin-bottom: ;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -28,76 +27,71 @@
     </div>
 
     <script type="text/babel">
-
-        const testClass = "test";
-
-        let myStyle = {
+        
+        let block = {
             display: "flex",
-            width: "400px",
-            flexDirection: "column",
+            width: "600px",
+            flexDirection: "row",
             marginLeft: "auto",
             marginRight: "auto",
             textAlign: "center",
-            color: "rgb(255, 255, 255)",
-            backgroundColor: "rgb(96, 177, 231)",
             fontFamily: "Verdana",
-            border: "2px solid black",
-            borderRadius: "20px"
+            backgroundColor: "rgb(138, 196, 243)",
+            border: "2px solid rgb(30, 56, 160)",
+            borderRadius: "20px",
+            color: "rgb(30, 56, 160)",
         }
 
         let myPhoto = {
-            width: "200px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "10px",
-            borderRadius: "10px"
+            width: "180px",
+            borderRadius: "10px",
+            margin: "10px"
         }
 
-        let myStyle2 = {
-            display: "flex",
-            width: "600px",
-            flexDirection: "column",
-            marginLeft: "auto",
-            marginRight: "auto",
-            textAlign: "center",
-            color: "rgb(87, 76, 76)",
-            backgroundColor: "bisque",
-            fontFamily: "Verdana",
-            border: "2px solid black",
-            borderRadius: "14px"
-        }
+        // let myStyle2 = {
+        //     display: "flex",
+        //     width: "600px",
+        //     flexDirection: "column",
+        //     marginLeft: "auto",
+        //     marginRight: "auto",
+        //     textAlign: "center",
+        //     color: "rgb(87, 76, 76)",
+        //     backgroundColor: "bisque",
+        //     fontFamily: "Verdana",
+        //     border: "2px solid black",
+        //     borderRadius: "14px"
+        // }
 
-        let myPhoto2 = {
-            width: "250px",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: "10px",
-            borderRadius: "10px"
-        }
+        // let myPhoto2 = {
+        //     width: "250px",
+        //     marginLeft: "auto",
+        //     marginRight: "auto",
+        //     marginTop: "10px",
+        //     borderRadius: "10px"
+        // }
 
-        let myPhotoClass = {
-            display: "flex",
-            width: "520px",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginBottom: "14px"
-        }
+        // let myPhotoClass = {
+        //     display: "flex",
+        //     width: "520px",
+        //     flexDirection: "row",
+        //     flexWrap: "wrap",
+        //     marginLeft: "auto",
+        //     marginRight: "auto",
+        //     marginBottom: "14px"
+        // }
 
         let div = document.getElementById("contactInformation");
 
         let root = ReactDOM.createRoot(div);
         root.render(
-            <div style={myStyle}>
-                <div>
-                    <img src="" alt="bookPhoto" style={myPhoto}></img>
+            <div>
+                <div style={block}>
+                    <img src="./book.jpg" alt="bookPhoto" style={myPhoto}></img>
                     <div>
-                        <h3>Name:</h3>
-                        <h3>Author:</h3>
-                        <h3>Genre:</h3>
-                        <h3>Genre:</h3>
-                        <h3>Amount of pages:</h3>
+                        <h3>The Adventures of Sherlock Holmes</h3>
+                        <h3>Arthur Conan Doyle</h3>
+                        <h3>Detective</h3>
+                        <h3>320 pages</h3>
                     </div>
                 </div>
                 <div>
