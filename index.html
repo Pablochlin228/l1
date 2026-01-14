@@ -8,30 +8,46 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <style>
-        .test {
-            background-color: rgb(30, 56, 160);
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    </style>
 </head>
 
 <body>
-    <div id="contactInformation">
+    <div id="bookInformation">
 
     </div>
 
-    <div id="cityInformation">
+    <div id="groupInformation">
 
     </div>
 
     <script type="text/babel">
-        
+
         let block = {
             display: "flex",
             width: "600px",
             flexDirection: "row",
+            marginLeft: "auto",
+            marginRight: "auto",
+            alignItems: "center",
+            textAlign: "center",
+            fontFamily: "Verdana",
+            backgroundColor: "rgb(138, 196, 243)",
+            border: "2px solid rgb(30, 56, 160)",
+            borderRadius: "20px",
+            color: "rgb(30, 56, 160)",
+            fontSize: "18px",
+        }
+
+        let myPhoto = {
+            width: "180px",
+            borderRadius: "10px",
+            margin: "10px",
+        }
+
+        let specialColor = {
+            color: "rgb(246, 247, 254)",
+        }
+
+        let reviewBlock = {
             marginLeft: "auto",
             marginRight: "auto",
             textAlign: "center",
@@ -39,48 +55,63 @@
             backgroundColor: "rgb(138, 196, 243)",
             border: "2px solid rgb(30, 56, 160)",
             borderRadius: "20px",
+            marginTop: "20px",
+            display: "flex",
+            width: "760px",
+            fontSize: "16px",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            padding: "8px",
             color: "rgb(30, 56, 160)",
         }
 
-        let myPhoto = {
-            width: "180px",
-            borderRadius: "10px",
-            margin: "10px"
+        let specialBorder = {
+            border: "1px solid rgb(246, 247, 254)",
+            borderRadius: "12px",
+            padding: "3px",
+            margin: "0 15px",
         }
 
-        // let myStyle2 = {
-        //     display: "flex",
-        //     width: "600px",
-        //     flexDirection: "column",
-        //     marginLeft: "auto",
-        //     marginRight: "auto",
-        //     textAlign: "center",
-        //     color: "rgb(87, 76, 76)",
-        //     backgroundColor: "bisque",
-        //     fontFamily: "Verdana",
-        //     border: "2px solid black",
-        //     borderRadius: "14px"
-        // }
+        let myStyle2 = {
+            display: "flex",
+            width: "600px",
+            flexDirection: "column",
+            marginLeft: "auto",
+            marginRight: "auto",
+            textAlign: "center",
+            color: "rgb(87, 76, 76)",
+            backgroundColor: "bisque",
+            fontFamily: "Verdana",
+            border: "2px solid rgb(87, 76, 76)",
+            borderRadius: "14px",
+            marginTop: "40px",
+            fontSize: "16px",
+            padding: "5px",
+        }
 
-        // let myPhoto2 = {
-        //     width: "250px",
-        //     marginLeft: "auto",
-        //     marginRight: "auto",
-        //     marginTop: "10px",
-        //     borderRadius: "10px"
-        // }
+        let myPhoto2 = {
+            width: "250px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            borderRadius: "10px"
+        }
 
-        // let myPhotoClass = {
-        //     display: "flex",
-        //     width: "520px",
-        //     flexDirection: "row",
-        //     flexWrap: "wrap",
-        //     marginLeft: "auto",
-        //     marginRight: "auto",
-        //     marginBottom: "14px"
-        // }
+        let myPhotoClass = {
+            display: "flex",
+            width: "1100px",
+            flexDirection: "row",
+            flexWrap: "nowrap",
+            marginLeft: "auto",
+            marginRight: "auto",
+            marginBottom: "14px",
+            backgroundColor: "bisque",
+            marginTop: "20px",
+            padding: "4px",
+            border: "2px solid rgb(87, 76, 76)",
+            borderRadius: "14px",
+        }
 
-        let div = document.getElementById("contactInformation");
+        let div = document.getElementById("bookInformation");
 
         let root = ReactDOM.createRoot(div);
         root.render(
@@ -88,35 +119,39 @@
                 <div style={block}>
                     <img src="./book.jpg" alt="bookPhoto" style={myPhoto}></img>
                     <div>
-                        <h3>The Adventures of Sherlock Holmes</h3>
+                        <h3 style={specialColor}>The Adventures of Sherlock Holmes</h3>
                         <h3>Arthur Conan Doyle</h3>
                         <h3>Detective</h3>
                         <h3>320 pages</h3>
                     </div>
                 </div>
-                <div>
-
-
+                <div style={reviewBlock}>
+                    <p style={specialBorder}>I started reading detective stories when I was in seventh grade. At the end of the summer, I picked up Arthur Conan Doyle's "The Memoirs of Sherlock Holmes," and it's been my favorite ever since. I've reread it countless times, and it never gets boring.</p>
+                    <p style={specialBorder}>Immediately upon reading the book, you feel immersed in the stories, as if you're immersed in the atmosphere of London at that time. Noting the unique character of the books and the detective's very nature, you read attentively, pondering every detail.</p>
                 </div>
             </div>
         );
 
-        // let div2 = document.getElementById("cityInformation");
+        let div2 = document.getElementById("groupInformation");
 
-        // let root2 = ReactDOM.createRoot(div2);
-        // root2.render(
-        //     <div style={myStyle2}>
-        //         <h2>City:Odessa</h2>
-        //         <h2>Country:Ukraine</h2>
-        //         <h2>Founding date: 19.05 1945</h2>
-        //         <div style = {myPhotoClass}>
-        //             <img src="./2.jpg" alt="myPhoto" style={myPhoto2}></img>
-        //             <img src="./3.jpg" alt="myPhoto" style={myPhoto2}></img>
-        //             <img src="./4.jpg" alt="myPhoto" style={myPhoto2}></img>
-        //             <img src="./5.jpg" alt="myPhoto" style={myPhoto2}></img>
-        //         </div>
-        //     </div>
-        // ); 
+        let root2 = ReactDOM.createRoot(div2);
+        root2.render(
+            <div>
+                <div style={myStyle2}>
+                    <h2>Coldplay</h2>
+                    <img src="./Coldplay.jpg" alt="groupPhoto" style={myPhoto2}></img>
+                    <p>A British rock band formed in London in 1998. Its lineup has never changed, and since its inception, it has included vocalist, rhythm guitarist, and keyboardist Chris Martin, lead guitarist Jonny Buckland, bassist Guy Berryman, and drummer Will Champion. The band also includes creative director
+                        Phil Harvey.Coldplay's style is typically divided into two eras: the alternative rock and post-Britpop era (1998-2009, 2019) and the pop rock and pop era (2010-present, excluding 2019). The band is known for its unexpected and volatile shifts in sound and its atypical pop demeanor for rock musicians.
+                    </p>
+                </div>
+                <div style={myPhotoClass}>
+                    <img src="./1alb.jpg" alt="myPhoto" style={myPhoto2}></img>
+                    <img src="./2alb.jpg" alt="myPhoto" style={myPhoto2}></img>
+                    <img src="./3alb.jpg" alt="myPhoto" style={myPhoto2}></img>
+                    <img src="./4alb.jpg" alt="myPhoto" style={myPhoto2}></img>
+                </div>
+            </div>
+        ); 
     </script>
 </body>
 
